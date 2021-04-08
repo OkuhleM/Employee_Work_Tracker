@@ -1,0 +1,58 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  background-color: #191035;
+  color: whitesmoke;
+  margin: 0px auto;
+  /*padding: 10px 200px;*/
+}
+
+h1 {
+  text-align: center;
+  color: whitesmoke;
+  font-family: sans-serif;
+}
+
+body {
+  background-color: #FF3D57;
+  color: #101820FF;
+}
+
+#Table {
+  font-size: 2em;
+  border-collapse: collapse;
+  width: 100%;
+  margin-top: 65px;
+}
+
+#Table, th {
+  background-color: rgb(216, 128, 189);
+  border: 1px solid black;
+}
+
+#button {
+  background-color: rgb(179, 145, 147);
+  border: none;
+  /*color: black;*/
+  padding: 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 1rem;
+  margin: 2px;
+  cursor: pointer;
+}
+
+#myDIV input {
+  width: 100%;
+  resize: vertical;
+  padding: 10px;
+  margin-bottom: 15px;
+  margin-top: 5px;
+  border: 1px solid rgba(109, 3, 109, 0.753);
+  box-sizing: border-box;
+  border-radius: 10px;
+}
