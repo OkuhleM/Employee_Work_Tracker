@@ -26,7 +26,7 @@ var cell3 = newRow.insertCell(2);
 
 cell1.InnerHTML = name;
 cell2.InnerHTML = surname;
-cell3.InnerHTML = Working on;
+cell3.InnerHTML = WorkingOn;
 
-row++;
+row++,
 }
