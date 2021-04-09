@@ -17,7 +17,7 @@ h1 {
 }
 
 body {
-  background-color: #FF3D57;
+  background-color: silver;
   color: #101820FF;
 }
 
@@ -29,11 +29,11 @@ body {
 }
 
 #Table, th {
-  background-color: rgb(216, 128, 189);
+  background-color: rgb(224, 95, 95);
   border: 1px solid black;
 }
 
-#button {
+span {
   background-color: rgb(179, 145, 147);
   border: none;
   /*color: black;*/

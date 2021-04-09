@@ -1,32 +1,18 @@
-var button = document.getElementById("button");
-button.addEventListener("click, displayDetails");
+var myNodelist = document.getElementsByClassName("THEAD");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+  var span = document.createElement("SPAN");
+  var txt = document.createTextNode("\u00D7");
+  span.className = "close";
+  span.appendChild(txt);
+  myNodelist[i].appendChild(span);
+}
 
-var row = 1;
-
-function displayDetails() {
-  var name = document.getElementById("name").value;
-  var surname = document.getElementById("surname").value;
-  var WorkingOn = document.getElementById("WorkingOn").value;
-
-if(!name || !surname || !WorkingOn) {
-  alert("Please don't live out any spaces");
-  return;
-
-} 
-
-var table = document.getElementById("Table");
-
-var newRow = display.insertRow(row);
-
-var cell1 = newRow.insertCell(0);
-
-var cell2 = newRow.insertCell(1);
-
-var cell3 = newRow.insertCell(2);
-
-cell1.InnerHTML = name;
-cell2.InnerHTML = surname;
-cell3.InnerHTML = WorkingOn;
-
-row++,
+var close = document.getElementsByClassName("close");
+var i;
+for (i = 0; i < close.length; i++) {
+  close[i].onclick = function () {
+    var div = this.parentElement;
+    div.style.display = "none";
+  }
 }
