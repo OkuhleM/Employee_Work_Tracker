@@ -3,52 +3,57 @@
 
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <script src="index.js" defer></script>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Dela Gothic One">
+  <script src="script.js" defer></script>
   <link rel="stylesheet" href="index.css">
 
   <title>Employee Tracker App</title>
 </head>
 
 <body>
-  <div id="myDIV" class="header">
-    <h1>Employee Tracker App</h1>
-    <form class="form-inline" action="#">
-      <div id="name">
-        <label for="name">Name:</label>
-        <input type="name" class="name" id="name" placeholder="Enter name" name="name">
-     
-      <div id="surname">
-        <label for="surname">Surname:</label>
-        <input type="surname" class="Surname" id="surname" placeholder="Enter surname" name="Surname">
+  <table>
+    <tr>
+      <td>
+        <form onsubmit="onFormSubmit(event)" autocomplete="off">
+          <div>
+            <label>name</label>
+            <input type="text" name="name" id="name">
+          </div>
 
-        <div id="WorkingOn">
-          <label for="Working on">Working on:</label>
-          <input type="Working on" class="Working on" id="Working on" placeholder="Working on" name="Working on">
-          <span onclick="newElement()" class="addBtn">SUBMIT</span>
-         <!--button id="submit">Submit</button-->
-    </form>
-  </div>
-</div>
-</div>
-</div>
-    <div>
-      <table id="Table">
-        <tr>
-          <th>Name <tb></tb> </th>
-          <th>Surname <tb></tb> </th>
-          <th>Working on <tb></tb></th>
-          <th>Check<tb></tb></th>
-          <th>delete<tb class="THEAD"></tb></th>
-          <th>Edit<tb></tb></th> 
-      </tr>
-      </table>
+          <div>
+            <label>surname</label>
+            <input type="text" name="surname" id="surname">
+          </div>
 
-    </div>
+          <div>
+            <label>Working on</label>
+            <input type="text" name="workingOn" id="workingOn">
+          </div>
 
+          <div class="form-action-buttons">
+            <input type="submit" value="submit" id="button">
+          </div>
+        </form>
+      </td>
+      <td>
+        <table class="list" id="employeeList">
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Surname</th>
+              <th>Working On</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
 
+          </tbody>
+        </table>
 
+      </td>
+    </tr>
+  </table>
 </body>
 
 </html>

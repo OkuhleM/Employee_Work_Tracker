@@ -1,58 +1,68 @@
-* {
-  margin: 0;
-  padding: 0;
+body>table {
+  width: 80%;
+  
 }
 
-.header {
-  background-color: #191035;
-  color: whitesmoke;
-  margin: 0px auto;
-  /*padding: 10px 200px;*/
-}
-
-h1 {
-  text-align: center;
-  color: whitesmoke;
-  font-family: sans-serif;
-}
-
-body {
-  background-color: silver;
-  color: #101820FF;
-}
-
-#Table {
-  font-size: 2em;
+table {
   border-collapse: collapse;
+  
+}
+
+table.list {
   width: 100%;
-  margin-top: 65px;
 }
 
-#Table, th {
-  background-color: rgb(224, 95, 95);
+td, th {
   border: 1px solid black;
+  text-align: center;
+  padding: 8px;
+  
 }
 
-span {
-  background-color: rgb(179, 145, 147);
-  border: none;
-  /*color: black;*/
-  padding: 9px;
-  text-align: center;
-  text-decoration: none;
+tr:nth-child(odd), table.list thead>tr {
+background-color: teal;
+  
+}
+
+input[type=text], input[type=number] {
+  width: 100%;
+  padding: 10px 0.5px;
+  margin: 8px 0.6px;
   display: inline-block;
-  font-size: 1rem;
-  margin: 2px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  
+}
+
+/* 
+ */
+
+input[type=submit]{
+  width: 30%;
+  background-color: grey;
+  color: black;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
   cursor: pointer;
 }
 
-#myDIV input {
-  width: 100%;
-  resize: vertical;
-  padding: 10px;
-  margin-bottom: 15px;
-  margin-top: 5px;
-  border: 1px solid rgba(109, 3, 109, 0.753);
-  box-sizing: border-box;
-  border-radius: 10px;
+.btn:hover {
+  background-color: #bbb;
+}
+
+form div.form-action-buttons {
+  text-align: right;
+}
+
+a {
+  cursor: pointer;
+  text-decoration: underline;
+  color: white;
+  margin-right: 4px;
+}
+
+.hide {
+  display: none;
 }
