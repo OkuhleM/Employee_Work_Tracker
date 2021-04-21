@@ -61,7 +61,7 @@ selectedRow.cells[2].innerHTML = formInfor.innerHTML.workingOn;
 }
 
 function onDelete(td) {
-    if (confirm('Do you really want to delete this record ?')) {
+    if (confirm('This Item will be deleted ?')) {
         row = td.parentElement.parentElement;
         document.getElementById("employeeList").deleteRow(row.rowIndex);
         resetForm();
