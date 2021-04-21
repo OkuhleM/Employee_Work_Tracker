@@ -5,37 +5,38 @@ function onFormSubmit(event) {
    
   event.preventDefault( )
  
-var formData = readFormData();
+var formInfor = readFormInfor();
 if(selectedRow == null)
-insertNewRecord(formData);
+insertNewRecord(formInfor);
 else
- updateRecord(formData);
+ updateRecord(formInfor);
 
 resetForm();
 }
 // console.log('name', document.getElementById("name").value)
 // console.log('surname',document.getElementById("surname").value)
 // console.log('working',document.getElementById("workingOn").value)
-function readFormData() {
-var formData = {};
-formData["name"] = document.getElementById("name").value;
-formData["surname"] = document.getElementById("surname").value;
-formData["workingOn"] = document.getElementById("workingOn").value;
-return formData;
+function readFormInfor() {
+var formInfor = {};
+formInfor["name"] = document.getElementById("name").value;
+formInfor["surname"] = document.getElementById("surname").value;
+formInfor["workingOn"] = document.getElementById("workingOn").value;
+return formInfor;
 }
 
-function insertNewRecord(data) {
+function insertNewRecord(Infor) {
 var table = document.getElementById("employeeList").getElementsByTagName('tbody')[0];
 var newRow = table.insertRow(table.length);
 cell1 = newRow.insertCell(0);
-cell1.innerHTML = data.name;
+cell1.innerHTML = Infor.name;
 cell2 = newRow.insertCell(1);
-cell2.innerHTML = data.surname;
+cell2.innerHTML = Infor.surname;
 cell3 = newRow.insertCell(2);
-cell3.innerHTML = data.workingOn;
+cell3.innerHTML = Infor.workingOn;
 cell4 = newRow.insertCell(3);
 cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                  <a onClick="onDelete(this)">Delete</a>`;
+                  <a onClick="onDelete(this)">Delete</a>
+                  <input type="checkbox" value="check" id='check'>`;
 }
 
 function resetForm() {
@@ -53,10 +54,10 @@ function onEdit(td) {
   
 }
 
-function updateRecord(formData) {
-selectedRow.cells[0].innerHTML = formData.innerHTML.name; 
-selectedRow.cells[1].innerHTML = formData.innerHTML.surname;
-selectedRow.cells[2].innerHTML = formData.innerHTML.workingOn;
+function updateRecord(formInfor) {
+selectedRow.cells[0].innerHTML = formInfor.innerHTML.name; 
+selectedRow.cells[1].innerHTML = formInfor.innerHTML.surname;
+selectedRow.cells[2].innerHTML = formInfor.innerHTML.workingOn;
 }
 
 function onDelete(td) {
@@ -66,6 +67,17 @@ function onDelete(td) {
         resetForm();
     }
 }
+
+function onComplete(td) {
+if (confirm('Are you done?')){
+        row = td.parentElement.parentElement;
+        document.getElementById("employeeList").completeRow(row.rowIndex);
+        resetForm();
+
+}
+}
+  
+
 
 function validate() {
     isValid = true;

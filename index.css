@@ -1,11 +1,9 @@
 body>table {
   width: 80%;
-  
 }
 
 table {
   border-collapse: collapse;
-  
 }
 
 table.list {
@@ -16,12 +14,10 @@ td, th {
   border: 1px solid black;
   text-align: center;
   padding: 8px;
-  
 }
 
 tr:nth-child(odd), table.list thead>tr {
-background-color: teal;
-  
+  background-color: teal;
 }
 
 input[type=text], input[type=number] {
@@ -31,13 +27,12 @@ input[type=text], input[type=number] {
   display: inline-block;
   border: 1px solid #ccc;
   border-radius: 4px;
-  
 }
 
 /* 
  */
 
-input[type=submit]{
+input[type=submit] {
   width: 30%;
   background-color: grey;
   color: black;
@@ -56,12 +51,12 @@ form div.form-action-buttons {
   text-align: right;
 }
 
-a {
+/* .action-button a {
   cursor: pointer;
   text-decoration: underline;
   color: white;
   margin-right: 4px;
-}
+} */
 
 .hide {
   display: none;
