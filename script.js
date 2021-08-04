@@ -34,8 +34,8 @@ cell2.innerHTML = Infor.surname;
 cell3 = newRow.insertCell(2);
 cell3.innerHTML = Infor.workingOn;
 cell4 = newRow.insertCell(3);
-cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a>
-                  <a onClick="onDelete(this)">Delete</a>
+cell4.innerHTML = `<a onClick="onEdit(this)">Edit</a><br>
+                  <a onClick="onDelete(this)">Delete</a><br>
                   <input type="checkbox" value="check" id='check'>`;
 }
 
